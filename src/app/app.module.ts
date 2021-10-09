@@ -8,6 +8,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { HomeComponent } from './home/home.component';
 const firebaseConfig = {
   apiKey: "AIzaSyBdZEIbNR8JbAwjKwdQyUMQZU8WCRifs2s",
   authDomain: "scribe-rahul.firebaseapp.com",
@@ -27,7 +28,8 @@ const analytics = getAnalytics(app);
     AppComponent,
     MenuComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
