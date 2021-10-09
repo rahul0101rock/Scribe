@@ -1,7 +1,10 @@
+<div class="background">
 <div class="container">
-    <h1 class="text-center text-primary">Login</h1>
-    <br><br>
-    <div class="form-group offset-md-4 col-md-4">
+    <br>
+    <div class="card-body">
+    <h1 class="text-center text-white card-title">Login</h1>
+    <br>
+    <div class="form-group offset-sm-4 col-sm-4 card-text">
         <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
             <input type="email" class="form-control" placeholder="Email" [formControl]= "$any(myForm).controls['email']">
             <br>
@@ -9,10 +12,16 @@
             <input type="password" class="form-control" placeholder="Password" [formControl]= "$any(myForm).controls['password']">
             <br>
             <div class="alert alert-danger" *ngIf="($any(myForm).controls['password'].invalid && $any(myForm).controls['password'].touched)"> Password must be at-least 8 characters long <br> </div>
-            <button class="btn btn-primary col-12" [disabled]="!myForm.valid">Submit</button>
+            <button class="btn btn-warning col-12" [disabled]="!myForm.valid">Submit</button>
             <br><br>
             <div class="alert alert-success" *ngIf="message.length>0">{{message}}</div>
             <div class="alert alert-danger" *ngIf="userError">{{userError.message}}</div>
+            <div class="text-center">
+                <button class="btn btn-link text-white" routerLink="/home">Don't have an account? Create One</button>
+            </div>
         </form>
     </div>
+    </div>
+        
+</div>
 </div>
