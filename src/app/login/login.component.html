@@ -1,1 +1,18 @@
-<h1>login</h1>
+<div class="container">
+    <h1 class="text-center text-primary">Login</h1>
+    <br><br>
+    <div class="form-group offset-md-4 col-md-4">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+            <input type="email" class="form-control" placeholder="Email" [formControl]= "$any(myForm).controls['email']">
+            <br>
+            <div class="alert alert-danger" *ngIf="($any(myForm).controls['email'].invalid && $any(myForm).controls['email'].touched)"> Enter a valid Email <br> </div>
+            <input type="password" class="form-control" placeholder="Password" [formControl]= "$any(myForm).controls['password']">
+            <br>
+            <div class="alert alert-danger" *ngIf="($any(myForm).controls['password'].invalid && $any(myForm).controls['password'].touched)"> Password must be at-least 8 characters long <br> </div>
+            <button class="btn btn-primary col-12" [disabled]="!myForm.valid">Submit</button>
+            <br><br>
+            <div class="alert alert-success" *ngIf="message.length>0">{{message}}</div>
+            <div class="alert alert-danger" *ngIf="userError">{{userError.message}}</div>
+        </form>
+    </div>
+</div>
