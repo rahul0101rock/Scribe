@@ -20,7 +20,7 @@ export class AuthService {
 
         updateProfile(response.user, {
           displayName: first_name + " " + last_name,
-          photoURL: "https://api.adorable.io/avatars/" + Math.floor(Math.random() * 1000)
+          photoURL: "https://avatars.dicebear.com/api/initials/" + first_name + "%20" + last_name +".svg"
           }).then(() => {
           resolve(response.user);
         }).catch((error) => {

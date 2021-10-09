@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import { MyblogsComponent } from './myblogs/myblogs.component';
 const routes: Routes = [
   {
     path: '', redirectTo: 'home', pathMatch: 'full'
@@ -11,6 +12,8 @@ const routes: Routes = [
     path: 'login', component: LoginComponent
   }, {
     path: 'home', component: HomeComponent
+  }, {
+    path: 'myblogs', component: MyblogsComponent
   }
   
 ];
