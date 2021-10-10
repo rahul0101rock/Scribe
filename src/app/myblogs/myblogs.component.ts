@@ -20,11 +20,9 @@ export class MyblogsComponent implements OnInit {
   ngOnInit(): void {
   }
   getPosts(){
-    // get the list of posts
     db.getDocs(db.query(db.collection(db.getFirestore(),"posts"), orderBy("created", "desc"), limit(100))).then((qs: any) => {
       console.log(qs.docs);
       this.posts = qs.docs;
-
     }).catch((err) => {
       console.log(err);
     })
@@ -32,14 +30,12 @@ export class MyblogsComponent implements OnInit {
   }
 
   onPostCreated(){
-    // refresh the list of posts
     this.posts = [];
     this.getPosts();
 
   }
 
   onDelete(){
-    // refresh the list of posts
     this.posts = [];
     this.getPosts();
   }
