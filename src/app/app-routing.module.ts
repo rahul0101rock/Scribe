@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import { ViewComponent } from './view/view.component';
 import { MyblogsComponent } from './myblogs/myblogs.component';
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   }, {
     path: 'myblogs', component: MyblogsComponent
-  }
+  },{
+    path: 'view/:postId', component: ViewComponent
+  }, {
+    path: '**', redirectTo: 'home'
+  },
   
 ];
 
