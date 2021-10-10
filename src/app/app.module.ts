@@ -10,6 +10,9 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { HomeComponent } from './home/home.component';
 import { MyblogsComponent } from './myblogs/myblogs.component';
+import { CreateComponent } from './create/create.component';
+import { NgxEditorModule } from 'ngx-editor';
+import { HttpClientModule } from '@angular/common/http';
 const firebaseConfig = {
   apiKey: "AIzaSyBdZEIbNR8JbAwjKwdQyUMQZU8WCRifs2s",
   authDomain: "scribe-rahul.firebaseapp.com",
@@ -31,13 +34,16 @@ const analytics = getAnalytics(app);
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    MyblogsComponent
+    MyblogsComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxEditorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
