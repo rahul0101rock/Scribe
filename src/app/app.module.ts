@@ -13,6 +13,7 @@ import { MyblogsComponent } from './myblogs/myblogs.component';
 import { CreateComponent } from './create/create.component';
 import { NgxEditorModule } from 'ngx-editor';
 import { HttpClientModule } from '@angular/common/http';
+import { PostComponent } from './post/post.component';
 const firebaseConfig = {
   apiKey: "AIzaSyBdZEIbNR8JbAwjKwdQyUMQZU8WCRifs2s",
   authDomain: "scribe-rahul.firebaseapp.com",
@@ -35,7 +36,8 @@ const analytics = getAnalytics(app);
     LoginComponent,
     HomeComponent,
     MyblogsComponent,
-    CreateComponent
+    CreateComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,

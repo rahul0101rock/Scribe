@@ -14,6 +14,7 @@ export class CreateComponent implements OnInit {
   content = '';
   editor: Editor = new Editor();
   html = '';
+  @Output('postCreated') postCreated = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {
@@ -29,6 +30,7 @@ export class CreateComponent implements OnInit {
       created: serverTimestamp()
     }).then((data: any) => {
       console.log(data);
+      this.postCreated.emit();
     })
     .catch((error: any) => {
       console.log(error);
