@@ -17,6 +17,7 @@ import { PostComponent } from './post/post.component';
 import { ViewComponent } from './view/view.component';
 import { CommentsComponent } from './comments/comments.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ProfileComponent } from './profile/profile.component';
 const firebaseConfig = {
   apiKey: "AIzaSyBdZEIbNR8JbAwjKwdQyUMQZU8WCRifs2s",
   authDomain: "scribe-rahul.firebaseapp.com",
@@ -43,7 +44,8 @@ const analytics = getAnalytics(app);
     PostComponent,
     ViewComponent,
     CommentsComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

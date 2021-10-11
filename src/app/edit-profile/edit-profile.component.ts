@@ -15,7 +15,6 @@ export class EditProfileComponent implements OnInit {
   ngOnInit(): void {
   }
   getProfile(){
-
     let userId = auth.getAuth().currentUser?.uid;
     db.getDoc(db.doc(db.collection(db.getFirestore(),"users"),userId))
     .then((documentSnapshot) => {
@@ -39,7 +38,6 @@ export class EditProfileComponent implements OnInit {
     auth.updateProfile(au,{
       displayName: this.user.displayName, photoURL: this.user.photoUrl
     }).then(() => {
-
       let userId = auth.getAuth().currentUser?.uid;
       db.updateDoc(db.doc(db.collection(db.getFirestore(),"users"),userId),{
         first_name: this.user.displayName.split(' ')[0],
