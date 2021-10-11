@@ -1,6 +1,11 @@
 # Scribe
+A social blogging platform that allows users to log in, create their profile, and post. I have built this project using Angular, Firebase, and Cloud Firestore
+### https://scribe-rahul.web.app/
+## Home Page
+<img src="src/assets/homepage.png" alt="home" width="70%"/>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+## Create Component
+<img src="src/assets/createpage.png" alt="myblogs" width="70%"/>
 
 ## Development server
 
